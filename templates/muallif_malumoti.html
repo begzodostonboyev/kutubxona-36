@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>muallif malumotlari</title>
+</head>
+<body>
+      <h1> muallif malumoti</h1>
+    <hr>
+    {%for muallif in t_muallif%}
+        <p>
+            {{forloop.counter}}.
+            <a href="/2-topshiriq/{{muallif_id}}/">
+                {{muallif.ism}}
+            </a>
+        </p>
+    {%endfor%}
+    <a href="/">bosh sahifa</a>
+</body>
+</html>

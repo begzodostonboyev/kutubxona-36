@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Talabalar | Update</title>
+</head>
+<body>
+<h1>{{talaba.ism}} malumotlarini ozgartirish</h1>
+<hr>
+<form method=post>
+    {%csrf_token%}
+    <label for="ism">Ism:</label>
+    <input type="text" name="ism" id="ism" value="{{talaba.ism}}"required>
+    <br><br>
+    <label for="guruh">Guruhi:</label>
+    <input type="text" name="guruh" id="guruh" value="{{talab.guruh}}"required>
+    <br><br>
+    <label for="kurs">Kursi:</label>
+    <input type="number" name="kurs" id="kurs" value="{{talaba.kurs}}"required>
+    <br><br>
+    <label for="kitob_soni">kitob soni:</label>
+    <input type="number" name="kitob_soni" id="kitob_soni" value="{{talaba.kitob_soni}}"required>
+    <hr>
+    <button>saqlash</button>
+<a href="/talabalar">ortga</a>
+</form>
+</body>
+</html>

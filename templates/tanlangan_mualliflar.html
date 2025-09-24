@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kutubxona | Muallif </title>
+</head>
+<body>
+<h1> {{muallif.ism}}</h1>
+<hr>
+
+    <p>jinsi: {{muallif.jinsi}}</p>
+    <p>Tugilgan sanasi: {{muallif.tugulgan_sana | date:"d.m.Y"}}</p>
+    <p>Kitoblar: {{muallif.kitob_soni}}</p>
+    <p>{% if muallif.tirik == 'true' %} Tirik {%else%} Vafot etgan {%endif%} </p>
+  <a href="/">Bosh sahifa</a>
+<a href="/mualliflar">ortga</a>
+</body>
+</html>

@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Mualliflar ro'yhati</title>
+  <meta charset="UTF-8">
+  <title>mualliflar ro'yxati</title>
 </head>
 <body>
-    <h1> mualliflar ro'yhati</h1>
-    <hr>
+<h1>
+  Mualliflar
+</h1>
+<hr>
+
     {%for muallif in mualliflar%}
-        <p>{{forloop.counter}}.{{muallif.ism}}</p>
-    {%endfor%}
-    <a href="/">bosh sahifa</a>
+    <p>
+        {{forloop.counter}}.
+        <a href="/muallif_details/{{muallif.id}}/">
+            {{muallif.ism}}
+        </a>
+        <a href="/mualliflar/{{muallif.id}}/update/">
+            <button>
+                tahrirlash
+            </button>
+        </a>
+        <a href="/mualliflar/{{muallif.id}}/delete/">
+            <button>
+                delete
+            </button>
+        </a>
+    </p>
+  {%endfor%}
+
+<a href="/">Bosh sahifa</a>
+<a href="/">Ortga</a>
 </body>
 </html>

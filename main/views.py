@@ -68,9 +68,9 @@ def talaba_update_view(request, pk):
         talaba.ism = request.POST.get('ism')
         talaba.guruh = request.POST.get('guruh')
         talaba.kurs = request.POST.get('kurs')
-        talaba.kitobi_soni = request.POST.get('kitob_soni')
+        talaba.kitobi_soni = request.POST.get('kitobi_soni')
         talaba.save()
-        return redirect('talabalar')
+        return redirect('/talabalar')
     context={
         'talaba': talaba
     }
